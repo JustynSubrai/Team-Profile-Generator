@@ -1,0 +1,29 @@
+{
+  "name": "Team-Profile-Generator",
+  "version": "1.0.0",
+  "description": "Uses Node.js to take in information about users and generates an HTML webpage that displays summaries for each person.",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "dependencies": {
+    "express": "^4.17.3",
+    "inquirer": "^8.2.1",
+    "jest": "^27.5.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JustynSubrai/Team-Profile-Generator.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JustynSubrai/Team-Profile-Generator/issues"
+  },
+  "homepage": "https://github.com/JustynSubrai/Team-Profile-Generator#readme"
+}
