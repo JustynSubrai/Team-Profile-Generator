@@ -1,9 +1,18 @@
-const { TestWatcher } = require('jest');
+const Manager = require('../lib/Manager.js');
 
-test('creates a manager object', () => {
-    const manager = new Manager('Gwyn')
+describe('creates a intern object', () => {
+    const manager = new Manager('Gwyn', 198, 'LordofCinders@gmail.com', 312798, 'Manager');
 
-    expect(manager.name).toBe('Gwyn');
-    expect(manager.id).toEqual(expect.any(Number));
-    expect(manager.email).toBe('LordofCinder@gmail.com');
+    it('should create a new class named Manager with 5 properties', () => {
+
+        expect(manager).toEqual({name:'Gwyn', id: 198, email: 'LordofCinders@gmail.com', officeNum: 312798, role: 'Manager'});
+    });
+
+    it('should have the role return manager when getRole is called', () => {
+        expect(manager.getRole()).toEqual('Manager');
+    });  
+
+    it('should return the managers office number when getOfficeNum is called', () => {
+        expect(manager.getOfficeNum()).toEqual(`${manager.officeNum}`);
+    });
 });
