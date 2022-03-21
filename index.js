@@ -1,6 +1,6 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
-const codeTemplate = require();
+const htmlTemplate = require('./src/htmlTemplate');
 const Engineer = require('./lib/Engineer');
 const Intern = require('./lib/Intern');
 const Manager = require('./lib/Manager');
@@ -123,7 +123,7 @@ const questions = [
         name: "add",
         message: "Would you like to add another employee?",
         default: true,
-        validate: addMoreInput => {
+        validate: (addMoreInput) => {
             if (addMoreInput === false)
             {
                 return;
@@ -158,10 +158,10 @@ function userQuestions() {
                 default:
                     break;
             }
-        if (response.addMore === true) {
-            userQuestions(); 
+        if (response.addMoreInput === true) {
+            return userQuestions(); 
         } else {
-            const answers = codeTemplate(employeeList)
+            const answers = htmlTemplate(employeeList)
             writePage(`${employeeList[0].name}-team.html`, answers)
         };
     });
@@ -174,7 +174,7 @@ function startQuestion() {
         message: 'Welcome to the Team Profile Generator! Would you like to build a webpage for your team?',
         default: true,
     }])
-    .then((response) => {
+    .then(() => {
         if(response = true){
             userQuestions();
         }
