@@ -3,7 +3,7 @@ function engineerCard(engineer) {
     
     return `
     <div class='col' id='employee-card'>
-    <div class='card text-white bg-info mb-3 mx-4' style='max-width: 25rem;'>
+    <div class='card text-white bg-dark mb-3 mx-4' style='max-width: 25rem;'>
     <div class='card-header'><h5 class='card-title'>${engineer.role}</h5></div>
     <div class='card-body'>
     <p class='card-text'>${engineer.name}</p>
@@ -20,7 +20,7 @@ function internCard(intern) {
     
     return `
     <div class='col' id='employee-card'>
-    <div class='card text-white bg-info mb-3 mx-4' style='max-width: 25rem;'>
+    <div class='card text-white bg-dark mb-3 mx-4' style='max-width: 25rem;'>
     <div class='card-header'><h5 class='card-title'>${intern.role}</h5></div>
     <div class='card-body'>
     <p class='card-text'>${intern.name}</p>
@@ -37,7 +37,7 @@ function managerCard(manager) {
     
     return `
     <div class='col' id='employee-card'>
-    <div class='card text-white bg-info mb-3 mx-4' style='max-width: 25rem;'>
+    <div class='card text-white bg-dark mb-3 mx-4' style='max-width: 25rem;'>
         <div class='card-header'><h5 class='card-title'>${manager.role}</h5></div>
         <div class='card-body'>
             <p class='card-text'>${manager.name}</p>
@@ -86,7 +86,7 @@ return `<!DOCTYPE html>
 </head>
 <body> 
     <div class='jumbotron jumbotron-fluid'>
-    <h1 class='display-4'>Meet Our Team!</h1>
+    <h1 class='display-4 ml-4'>Meet Our Team!</h1>
     </div>
     <div class='row row-cols-1 row-cols-md-3 g-4'>
     ${addEmployeeCard(employeeCards)}

@@ -135,7 +135,7 @@ const questions = [
 function writePage(fileName, data) {
     console.log(data)
     fs.writeFile(fileName, data, err => {
-    err ? console.log(err) : console.log("Page successfully created!");
+    err ? console.log(err) : console.log("The html was successfully generated!");
    }
 )}
 
@@ -158,11 +158,11 @@ function userQuestions() {
                 default:
                     break;
             }
-        if (response.addMoreInput === true) {
+        if (response.add === true) {
             return userQuestions(); 
         } else {
             const answers = htmlTemplate(employeeList)
-            writePage(`${employeeList[0].name}-team.html`, answers)
+            writePage('./dist/index.html', answers)
         };
     });
 };
