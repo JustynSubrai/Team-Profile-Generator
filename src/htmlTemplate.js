@@ -26,7 +26,7 @@ function internCard(intern) {
     <p class='card-text'>${intern.name}</p>
     <p class='card-text'>ID Number: ${intern.id}</p>
     <p class='card-text'>Email: ${intern.email}</p>
-    <p class='card-text'>Office Number: ${intern.school}</p>
+    <p class='card-text'>School Attended: ${intern.school}</p>
     </div>
     </div>
     </div>`
