@@ -9,7 +9,7 @@ function engineerCard(engineer) {
     <p class='card-text'>${engineer.name}</p>
     <p class='card-text'>ID Number: ${engineer.id}</p>
     <p class='card-text'>Email: ${engineer.email}</p>
-    <p class='card-text'>GitHub: ${engineer.github}</p>
+    <a href='${engineer.github}' class='card-text'>GitHub: ${engineer.github}</a>
     </div>
     </div>
     </div>`
